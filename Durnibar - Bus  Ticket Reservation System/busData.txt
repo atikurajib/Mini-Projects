@@ -1,0 +1,20 @@
+Safar,Dhaka,Rajshahi,8:00am,57,0,700,1,623183840
+Jatra,Dhaka,Khulna,9:00am,41,1,1600,2,623183840
+Zatri,Dhaka,Chattagram,9:00am,41,1,1800,3,623183840
+Pother Sur,Dhaka,Shylet,10:00am,41,0,1300,4,623183840
+Meghdut,Dhaka,Chapai,10:00am,41,0,1000,5,623183840
+Pother Sathi,Dhaka,Srimangal,10:330am,41,1,1150,6,623183840
+POtho Bondhhu,Dhaka,Dinajpur,11:00am,41,1,900,7,623183840
+Mridu Goti,Dhaka,Rajshahi,10:30am,41,0,400,8,623183840
+Shongi,Chapai,Dhaka,7:00pm,41,1,900,9,623183840
+Akashpoth,Feni,Bogura,12:00pm,41,1,700,10,623183840
+Shopnopothe,Rajshahi,Rangpur,11:30am,41,1,1250,11,623183840
+Meghmala,Magura,Naogoan,8:00pm,41,0,700,12,623183840
+Oronnopoth,Dhaka,Pabna,08:30pm,41,0,400,13,623183840
+Gotidhara,Rajshahi,Barishal,09:00pm,41,1,1400,14,623183840
+Songjogpoth,Dhaka,Cumilla,09:30pm,41,0,900,15,623183840
+Choltipoth,Rajshahi,Cox's Bazar,10:00pm,41,1,1600,16,623183840
+Chokro,Dhaka,Jashore,10:00am,41,0,1000,17,623183840
+Prantore,Dhaka,Narail,10:20am,41,0,550,18,623183840
+Panthopothe,Dhaka,Magura,11:45am,41,0,1100,19,623183840
+Vromon,Bogura,Feni,10:00am,41,0,1400,20,623183840
