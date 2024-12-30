@@ -98,7 +98,7 @@ public class QuizApplication {
         int correctAnswers = 0; 
         int incorrectAnswers = 0; 
     
-        System.out.println("\nSWelcome to the Quiz Application!\n");
+        System.out.println("\nWelcome to the Quiz Application!\n");
     
         for (int i = 0; i < questions.size(); i++) {
             Question question = questions.get(i);
