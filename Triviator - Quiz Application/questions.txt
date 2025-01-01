@@ -1,69 +1,34 @@
 Question: What is a class in object-oriented programming?  
-A: A blueprint for creating objects  
-B: A function that performs operations  
-C: A variable that stores data  
-D: A library for handling input  
-Correct Answer: A  
+optionA: A blueprint for creating objects  
+optionB: A function that performs operations  
+optionC: A variable that stores data  
+optionD: A library for handling input  
+correctAnswer: A  
 
 Question: What is an object in OOPS?  
-A: A data type  
-B: An instance of a class  
-C: A method within a class  
-D: A function prototype  
-Correct Answer: B  
+optionA: A data type  
+optionB: An instance of a class  
+optionC: A method within a class  
+optionD: A function prototype  
+correctAnswer: B  
 
 Question: Which of the following is NOT a pillar of OOPS?  
-A: Encapsulation  
-B: Polymorphism  
-C: Abstraction  
-D: Serialization  
-Correct Answer: D  
+optionA: Encapsulation  
+optionB: Polymorphism  
+optionC: Abstraction  
+optionD: Serialization  
+correctAnswer: D  
 
 Question: How is encapsulation achieved in OOPS?  
-A: Using loops  
-B: By bundling data and methods in a class  
-C: Through recursion  
-D: By overloading operators  
-Correct Answer: B  
+optionA: Using loops  
+optionB: By bundling data and methods in a class  
+optionC: Through recursion  
+optionD: By overloading operators  
+correctAnswer: B  
 
 Question: What is the difference between a class and an object?  
-A: Classes are methods; objects are attributes  
-B: Classes are instances; objects are blueprints  
-C: Classes are blueprints; objects are instances  
-D: Classes and objects are the same  
-Correct Answer: C  
-
-Question: Which of the following best describes inheritance?  
-A: Writing a function multiple times  
-B: Reusing methods and properties of another class  
-C: Hiding implementation details  
-D: Creating unrelated classes  
-Correct Answer: B  
-
-Question: What is polymorphism in OOPS?  
-A: Ability of functions to operate on multiple data types  
-B: Sharing data between objects  
-C: Writing methods inside a loop  
-D: Creating a single class  
-Correct Answer: A  
-
-Question: What type of polymorphism is achieved through method overriding?  
-A: Static polymorphism  
-B: Dynamic polymorphism  
-C: Compile-time polymorphism  
-D: Ad-hoc polymorphism  
-Correct Answer: B  
-
-Question: How does abstraction differ from encapsulation?  
-A: Encapsulation focuses on hiding details; abstraction focuses on reducing complexity  
-B: Abstraction and encapsulation are the same  
-C: Abstraction applies to methods only; encapsulation applies to classes only  
-D: Encapsulation requires inheritance, but abstraction does not  
-Correct Answer: A  
-
-Question: What is a constructor?  
-A: A special method to initialize an object  
-B: A method to destroy objects  
-C: A loop inside a class  
-D: A global variable in OOPS  
-Correct Answer: A  
+optionA: Classes are methods; objects are attributes  
+optionB: Classes are instances; objects are blueprints  
+optionC: Classes are blueprints; objects are instances  
+optionD: Classes and objects are the same  
+correctAnswer: C  
