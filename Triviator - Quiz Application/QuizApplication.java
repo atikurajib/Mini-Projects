@@ -41,6 +41,10 @@ class Question {
         return optionD;
     }
 
+    public String getCorrectAnswer() {
+        return correctAnswer;
+    }
+
     public boolean isCorrectAnswer(String answer) {
         return correctAnswer.equalsIgnoreCase(answer);
     }
@@ -52,37 +56,35 @@ public class QuizApplication {
 
     private List<Question> questions;
     private int score;
+    private Scanner scanner;
+
+    public QuizApplication() {
+        this.scanner = new Scanner(System.in);
+        this.questions = new ArrayList<>();
+    }
 
     public void loadQuestions() throws FileNotFoundException {
         File file = new File(QUESTIONS_FILE);
-        Scanner scanner = new Scanner(file);
-    
-        questions = new ArrayList<>();
-    
-        int lineCount = 1;
-        while (scanner.hasNextLine()) {
-            String line = scanner.nextLine().trim();
-    
+        Scanner fileScanner = new Scanner(file);
+
+        while (fileScanner.hasNextLine()) {
+            String line = fileScanner.nextLine().trim();
+
             if (line.startsWith("Question:")) {
                 String questionText = extractContent(line);
-                String optionAText = extractContent(scanner.nextLine());
-                String optionBText = extractContent(scanner.nextLine());
-                String optionCText = extractContent(scanner.nextLine());
-                String optionDText = extractContent(scanner.nextLine());
-                String correctAnswer = extractContent(scanner.nextLine());
-    
+                String optionAText = extractContent(fileScanner.nextLine());
+                String optionBText = extractContent(fileScanner.nextLine());
+                String optionCText = extractContent(fileScanner.nextLine());
+                String optionDText = extractContent(fileScanner.nextLine());
+                String correctAnswer = extractContent(fileScanner.nextLine());
+
                 Question question = new Question(questionText, optionAText, optionBText, optionCText, optionDText, correctAnswer);
                 questions.add(question);
-            } else {
-                System.out.println("Invalid question format at line " + lineCount);
             }
-    
-            lineCount++;
         }
-    
-        scanner.close();
+        fileScanner.close();
     }
-    
+
     private String extractContent(String line) {
         int colonIndex = line.indexOf(":");
         if (colonIndex != -1) {
@@ -95,57 +97,43 @@ public class QuizApplication {
 
     public void startQuiz() {
         score = 0;
-        int correctAnswers = 0; 
-        int incorrectAnswers = 0; 
-    
+
         System.out.println("\nWelcome to the Quiz Application!\n");
-    
+
         for (int i = 0; i < questions.size(); i++) {
             Question question = questions.get(i);
             System.out.println("Question " + (i + 1) + ": " + question.getQuestionText());
-            System.out.println("A. " + question.getOptionA());
-            System.out.println("B. " + question.getOptionB());
-            System.out.println("C. " + question.getOptionC());
-            System.out.println("D. " + question.getOptionD());
-    
+            System.out.println("A: " + question.getOptionA());
+            System.out.println("B: " + question.getOptionB());
+            System.out.println("C: " + question.getOptionC());
+            System.out.println("D: " + question.getOptionD());
+
             String userAnswer = getUserAnswer();
-    
+
             if (question.isCorrectAnswer(userAnswer)) {
                 System.out.println("Correct!\n");
                 score += SCORE_PER_QUESTION;
-                correctAnswers++; 
             } else {
-                System.out.println("Incorrect!\n");
-                incorrectAnswers++; 
+                System.out.println("Incorrect! The correct answer was: " + question.getCorrectAnswer() + "\n");
             }
         }
-    
-        System.out.println("Quiz Summary:");
-        System.out.println("Total Questions: " + questions.size());
-        System.out.println("Correct Answers: " + correctAnswers); 
-        System.out.println("Incorrect Answers: " + incorrectAnswers); 
-    
-        double percentage = (double) score / (questions.size() * SCORE_PER_QUESTION) * 100;
-        System.out.printf("Score: %.2f%%\n", percentage); 
-    
-        System.out.println("Thank you for joining this quiz!");
+
+        System.out.println("Your final score is: " + score);
     }
 
     private String getUserAnswer() {
-        Scanner scanner = new Scanner(System.in);
         System.out.print("Your Answer: ");
         return scanner.nextLine().toUpperCase();
     }
 
     public static void main(String[] args) {
         QuizApplication quiz = new QuizApplication();
-        
+
         try {
             quiz.loadQuestions();
             quiz.startQuiz();
         } catch (FileNotFoundException e) {
-            System.out.println("Failed to load questions from file: " + QuizApplication.QUESTIONS_FILE);
+            System.out.println("Failed to load questions from file: " + QUESTIONS_FILE);
         }
-     }
-  }
-
+    }
+}
