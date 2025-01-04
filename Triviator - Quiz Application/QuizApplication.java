@@ -98,7 +98,7 @@ public class QuizApplication {
     public void startQuiz() {
         score = 0;
 
-        System.out.println("\nWelcome to the Quiz Application!\n");
+        System.out.println("\nWelcome to the Triviator Quiz Application!\n");
 
         for (int i = 0; i < questions.size(); i++) {
             Question question = questions.get(i);
